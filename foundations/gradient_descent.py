@@ -6,9 +6,9 @@ class Solution:
         # Derivative:         f'(x) = 2x
         # Update rule:        x = x - learning_rate * f'(x)
         # Round final answer to 5 decimal places
-        while iterations > 0:
-            init = init - (learning_rate * 2 * init)
+        if iterations == 0:
+            return np.round(init, 5)
 
-            iterations -= 1
+        init = init - (learning_rate * 2 * init)
 
-        return np.round(init, 5)
+        return self.get_minimizer(iterations - 1, learning_rate, init)
