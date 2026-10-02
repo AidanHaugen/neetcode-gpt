@@ -11,4 +11,4 @@ class Solution:
 
             iterations -= 1
 
-        return np.round(init, 5)
+        return round(init, 5)
