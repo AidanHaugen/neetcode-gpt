@@ -16,8 +16,6 @@ class Solution:
             w_i = weights[i]
             b_i = biases[i]
 
-            print(type(a) != type(None))
-
             if type(a) != type(None):
                 z = np.dot(a, w_i)
             else:
