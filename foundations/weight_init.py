@@ -44,7 +44,6 @@ class Solution:
         
 
         relu = nn.ReLU()
-        
         x = torch.randn(1, input_dim)
         for w in weights:
             linear = nn.Linear(in_features=input_dim, out_features=hidden_dim, bias=False)
